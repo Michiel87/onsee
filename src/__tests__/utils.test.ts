@@ -19,9 +19,15 @@ describe('makeDataRanger', () => {
     expect(getRangeByIndex(start, end)).toEqual(expected)
   })
 
-  it('should treat negative start index as zero', () => {
+  it('should treat negative startIndex as zero', () => {
     const getRangeByIndex = makeDataRanger(data)
 
     expect(getRangeByIndex(-2, 3)).toEqual([0, 1, 2, 3])
+  })
+
+  it('should treat exceeding endIndex as last index of data', () => {
+    const getRangeByIndex = makeDataRanger(data)
+
+    expect(getRangeByIndex(22, 30)).toEqual([22, 23, 24])
   })
 })

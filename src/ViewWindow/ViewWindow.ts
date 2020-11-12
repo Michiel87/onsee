@@ -43,7 +43,7 @@ export class ViewWindow {
   }
 
   private getEndIndex () {
-    return this.getStartIndex() + (this.getItemsInView() - 1)
+    return this.getStartIndex() + this.getItemsInView()
   }
 
   /**
