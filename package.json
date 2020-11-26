@@ -1,4 +1,6 @@
 {
+  "name": "onsee",
+  "version": "0.0.1",
   "scripts": {
     "test": "yarn jest --watchAll"
   },
